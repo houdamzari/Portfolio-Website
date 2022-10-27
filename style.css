@@ -4,6 +4,13 @@
   font-size: 18px;
   line-height: 20px;
   color: #6070ff;
+  list-style: none;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: auto;
 }
 
 * {
@@ -132,7 +139,7 @@ h1 {
     height: 98px;
     font-style: normal;
     font-weight: lighter;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 20px;
     overflow-wrap: break-word;
   }
@@ -179,16 +186,14 @@ h1 {
   }
 
   .navbar {
-    padding: 5px 20px;
+    padding: 5px 5px;
     margin: 0;
     width: 100%;
   }
 
-  *,
-  body,
-  html {
+  body {
     margin: 0;
-    padding: 0;
+    padding: 0 10px;
     box-sizing: border-box;
   }
 }
