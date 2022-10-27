@@ -53,8 +53,7 @@ ul {
   background-color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
-  padding-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 .introduction {
@@ -111,6 +110,20 @@ h1 {
   height: 100%;
 }
 
+.Tonic {
+  width: 200px;
+  height: 100px;
+}
+
+.projects_section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 @media (max-width: 600px) {
   .introduction {
     display: flex;
@@ -118,8 +131,8 @@ h1 {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    height: 100%;
-    min-height: 700;
+    height: fit-content;
+    min-height: 500;
   }
 
   h1 {
@@ -147,18 +160,17 @@ h1 {
   .headline {
     background-image: url(./public/header-shapes\ mobile.png);
     width: 90%;
-    height: 100% !important;
+    height: 80%;
     background-color: #fff;
     background-repeat: no-repeat;
     background-size: contain;
-    position: absolute;
+    position: relative;
     padding: 0;
     background-position: center center;
     background-attachment: fixed;
-    overflow: hidden;
+    /* overflow-x: hidden; */
   }
 
-  .wrapper,
   html {
     overflow: hidden !important;
     margin: 0;
@@ -195,5 +207,94 @@ h1 {
     margin: 0;
     padding: 0 10px;
     box-sizing: border-box;
+    overflow-y: none;
+    background-color: yellow;
   }
+
+  .Tonic {
+    width: 295px;
+    height: 220px;
+    align-self: center;
+  }
+
+  h2 {
+    width: 295px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    margin-bottom: 10px;
+  }
+}
+
+.list_items {
+  list-style-type: circle;
+  width: 88px;
+  height: 16px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: #7a869a;
+}
+
+.list {
+  width: 100%;
+  display: flex;
+  gap: 32px;
+  margin-bottom: 15px;
+}
+
+.project_description {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.tag {
+  color: #6070ff;
+  border-radius: 12px;
+  background-color: #ebebff;
+  padding: 5px 10px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.btn {
+  padding: 20px;
+  width: 140px;
+  height: 24px;
+  font-weight: 500;
+  font-size: 17px;
+  color: #396df2;
+  font-style: normal;
+  border: 1px solid #396df2;
+  background-color: transparent;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.03em;
+}
+
+.tags {
+  margin-bottom: 20px;
+}
+
+.first_project,
+.second_project,
+.third_project,
+.forth_project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid grey;
+  border-radius: 12px;
+  padding: 15px 10px;
+  background-color: #fff;
+}
+.forth_project {
+  margin-bottom: 40px;
 }
