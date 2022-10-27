@@ -5,7 +5,11 @@
   line-height: 20px;
   color: #6070ff;
 }
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .navbar {
   padding: 0 154px;
 }
@@ -15,6 +19,7 @@ body {
   padding: 0 5px;
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 nav {
@@ -88,16 +93,21 @@ h1 {
   gap: 20px;
   align-items: center;
 }
-
+.wrapper {
+  overflow: hidden !important;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
 @media (max-width: 600px) {
   .introduction {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
-    padding: 0 10px;
-    top: 15%;
+    height: 100%;
     min-height: 700;
   }
 
@@ -124,21 +134,26 @@ h1 {
   }
 
   .headline {
-    background-image: url(./public/Background.png);
-    width: 100%;
-    height: 100%;
+    background-image: url(./public/header-shapes\ mobile.png);
+    width: 90%1;
+    height: 100% !important;
     background-color: #fff;
     background-repeat: no-repeat;
-    background-size: 400px 480px;
+    background-size: contain;
     position: absolute;
-    padding-bottom: 10px;
+    padding: 0px;
     background-position: center center;
     background-attachment: fixed;
     overflow: hidden;
   }
 
-  body {
-    overflow: hidden;
+  .wrapper,
+  html {
+    overflow: hidden !important;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
   }
 
   .menu-items {
@@ -159,11 +174,16 @@ h1 {
     background-color: #6070ff;
   }
 
-  nav {
-    padding-bottom: 5px;
-  }
-
   .navbar {
-    padding: 0 22px;
+    padding: 5px 20px;
+    margin: 0px;
+    width: 100%;
+  }
+  *,
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 }
