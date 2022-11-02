@@ -111,11 +111,6 @@ h1 {
   height: 100%;
 }
 
-.Tonic {
-  width: 200px;
-  height: 100px;
-}
-
 .project_section {
   padding: 0 16px;
   display: grid;
@@ -460,4 +455,57 @@ form {
   background-color: #fff;
   color: #5e6c84;
   border-color: #5e6c84;
+}
+
+@media (min-width: 768px) {
+  .first_project,
+  .second_project,
+  .third_project,
+  .forth_project {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 15px 15px;
+    background-color: #fff;
+    gap: 50px;
+  }
+  .Tonic {
+    width: 600px;
+    height: 400px;
+  }
+
+  .flex_list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .project_description {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .project_name {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    color: #091e42;
+    margin-bottom: 20px;
+  }
+
+  .About_Section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .About_Section_description {
+    width: 60%;
+  }
 }
