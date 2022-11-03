@@ -5,7 +5,8 @@
   line-height: 20px;
   color: #6070ff;
   list-style: none;
-  width: fit-content;
+  width: 100px;
+  display: inline-block;
 }
 
 a {
