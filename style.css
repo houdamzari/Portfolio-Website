@@ -20,12 +20,6 @@ a {
   box-sizing: border-box;
 }
 
-.navbar {
-  width: 100%;
-  padding: 0 154px;
-  background-color: white;
-}
-
 body {
   font-family: "Poppins", sans-serif;
   width: 100%;
@@ -37,10 +31,11 @@ body {
 nav {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   justify-content: space-between;
-  gap: 1000px;
+  background-color: white;
+  padding: 10px 20px;
 }
 
 ul {
@@ -126,12 +121,6 @@ h1 {
     width: 100%;
     height: fit-content;
     min-height: 500;
-  }
-
-  .navbar {
-    width: 100%;
-    padding: 30px 154px;
-    background-color: white;
   }
 
   .project_description {
@@ -223,13 +212,6 @@ h1 {
     width: 25px;
     height: 2px;
     background-color: #6070ff;
-  }
-
-  .navbar {
-    padding: 20px 10px;
-    margin: 0;
-    width: 100%;
-    background-color: white;
   }
 
   body {
@@ -488,6 +470,21 @@ form {
     margin-bottom: 20px;
   }
 
+  .navbar {
+    width: 100%;
+    background-color: white;
+    padding: 30px 154px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 850px;
+  }
+
   .dropdown {
     width: 100%;
     display: flex;
@@ -498,12 +495,6 @@ form {
     margin-top: 20px;
     justify-content: space-between;
     border-bottom: 1px solid #dfe1e6;
-  }
-
-  .navbar {
-    width: 100vw;
-    padding: 30px 154px;
-    background-color: white;
   }
 
   .Tonic {
