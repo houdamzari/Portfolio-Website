@@ -5,6 +5,8 @@
   line-height: 20px;
   color: #6070ff;
   list-style: none;
+  width: 100px;
+  display: inline-block;
 }
 
 a {
@@ -19,24 +21,22 @@ a {
   box-sizing: border-box;
 }
 
-.navbar {
-  padding: 0 154px;
-}
-
 body {
   font-family: "Poppins", sans-serif;
-  padding: 0 5px;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
+  background-color: #f7f7f7;
 }
 
 nav {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   justify-content: space-between;
+  background-color: white;
+  padding: 10px 20px;
 }
 
 ul {
@@ -97,12 +97,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-.icons-section {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-}
-
 .wrapper {
   overflow: hidden !important;
   margin: 0;
@@ -111,16 +105,11 @@ h1 {
   height: 100%;
 }
 
-.Tonic {
-  width: 200px;
-  height: 100px;
-}
-
 .project_section {
   padding: 0 16px;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 100%;
+  justify-content: center;
 }
 
 @media (max-width: 600px) {
@@ -133,6 +122,36 @@ h1 {
     width: 100%;
     height: fit-content;
     min-height: 500;
+  }
+
+  .project_description {
+    width: 200px;
+    height: fit-content;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .first_project,
+  .second_project,
+  .third_project,
+  .forth_project {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 15px 15px;
+    background-color: #fff;
+    width: fit-content;
+    justify-content: space-between;
+  }
+
+  .icons-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
   }
 
   h1 {
@@ -196,13 +215,6 @@ h1 {
     background-color: #6070ff;
   }
 
-  .navbar {
-    padding: 20px 10px;
-    margin: 0;
-    width: 100%;
-    background-color: white;
-  }
-
   body {
     margin: 0;
     padding: 0;
@@ -212,8 +224,8 @@ h1 {
   }
 
   .Tonic {
-    width: 295px;
-    height: 220px;
+    width: 225px;
+    height: 180px;
     align-self: center;
   }
 
@@ -244,12 +256,6 @@ h1 {
   display: flex;
   gap: 32px;
   margin-bottom: 15px;
-}
-
-.project_description {
-  width: 100%;
-  height: fit-content;
-  margin-bottom: 10px;
 }
 
 .tag {
@@ -341,20 +347,6 @@ h1 {
   margin-bottom: 20px;
 }
 
-.first_project,
-.second_project,
-.third_project,
-.forth_project {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-  border: 2px solid grey;
-  border-radius: 12px;
-  padding: 15px 15px;
-  background-color: #fff;
-}
-
 .forth_project {
   margin-bottom: 40px;
 }
@@ -422,6 +414,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
 }
 
 .form_input {
@@ -460,4 +453,183 @@ form {
   background-color: #fff;
   color: #5e6c84;
   border-color: #5e6c84;
+}
+
+@media (min-width: 768px) {
+  .first_project,
+  .second_project,
+  .third_project,
+  .forth_project {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px solid grey;
+    border-radius: 12px;
+    padding: 15px 35px;
+    background-color: #fff;
+    gap: 50px;
+    margin-bottom: 20px;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .navbar {
+    width: 100%;
+    background-color: white;
+    padding: 30px 154px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    gap: 850px;
+  }
+
+  .dropdown {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 100px;
+    padding-bottom: 20px;
+    margin-top: 20px;
+    justify-content: space-between;
+    border-bottom: 1px solid #dfe1e6;
+  }
+
+  .Tonic {
+    width: 600px;
+    height: 400px;
+  }
+
+  .flex_list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .project_description {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .project_name {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    color: #091e42;
+    margin-bottom: 20px;
+  }
+
+  .About_Section {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    padding: 100px 120px;
+  }
+
+  .About_Section_description {
+    width: 400px;
+  }
+
+  .About_Section_flex {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0;
+  }
+
+  .About_Section_flexx {
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 0;
+  }
+
+  /* body {
+    margin: 0;
+    padding: 20px 100px;
+    box-sizing: border-box;
+    overflow-y: none;
+    background-color: #f7f7f9;
+  } */
+
+  .languages {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 122px;
+    height: 120px;
+  }
+
+  .about_section_lists {
+    min-width: 700px;
+  }
+
+  .contact_paragraph {
+    align-self: center;
+    width: 40%;
+  }
+
+  .form_header {
+    align-self: center;
+  }
+
+  .form_input {
+    min-width: 447px;
+  }
+
+  .footer {
+    background-image: url(/public/contact\ .svg);
+    background-size: cover;
+    background-color: #6070ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-top-left-radius: 70px;
+    gap: 120px;
+    min-height: 846px;
+  }
+
+  .footer_section {
+    background-color: white;
+  }
+
+  .headline {
+    background-image: url(./public/Background.png);
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 10%;
+  }
+
+  .project_section {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 100%;
+    padding: 0 100px;
+    margin-bottom: 100px;
+  }
 }
