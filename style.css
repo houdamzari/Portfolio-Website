@@ -7,6 +7,19 @@
   list-style: none;
   width: 100px;
   display: inline-block;
+  animation-name: logo-load;
+  animation-duration: 8s;
+  animation-delay: 1s;
+}
+
+@keyframes logo-load {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 a {
