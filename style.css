@@ -23,9 +23,7 @@
 }
 
 .Tonic:hover {
-  transform: scale(1);
-  width: 700px;
-  height: 648px;
+  transform: scale(1.1);
 }
 
 a {
