@@ -22,6 +22,12 @@
   }
 }
 
+.Tonic:hover {
+  transform: scale(1);
+  width: 700px;
+  height: 648px;
+}
+
 a {
   text-decoration: inherit;
   color: inherit;
