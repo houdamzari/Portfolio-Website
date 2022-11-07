@@ -7,6 +7,23 @@
   list-style: none;
   width: 100px;
   display: inline-block;
+  animation-name: logo-load;
+  animation-duration: 8s;
+  animation-delay: 1s;
+}
+
+@keyframes logo-load {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.Tonic:hover {
+  transform: scale(1.1);
 }
 
 a {
@@ -408,6 +425,10 @@ h1 {
   font-weight: 300;
   font-size: 18px;
   line-height: 24px;
+}
+
+.contact_paragraph:hover {
+  transform: translateX(200px);
 }
 
 .form_inputs {
