@@ -443,6 +443,10 @@ h1 {
   border-radius: 10px;
 }
 
+.form_input:focus {
+  box-shadow: 0 0 10px 10px #2230d2;
+}
+
 .form_button {
   padding: 10px 20px;
   border-radius: 12px;
