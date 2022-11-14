@@ -141,17 +141,17 @@ h1 {
     min-height: 500;
   }
 
-  .line .active:first-child {
+  .hamburger-menu .active:first-child {
     transform: rotateZ(28deg);
     transform-origin: left;
   }
 
-  .line .active:nth-child(2) {
+  .hamburger-menu .active:nth-child(2) {
     transform: rotateZ(-28deg) translateY(-4px);
     transform-origin: right;
   }
 
-  .line .active:last-child {
+  .hamburger-menu .active:last-child {
     display: none;
   }
 
@@ -238,6 +238,7 @@ h1 {
     justify-content: center;
     align-items: center;
     gap: 4px;
+    cursor: pointer;
   }
 
   .line {
