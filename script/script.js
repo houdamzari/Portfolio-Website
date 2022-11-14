@@ -1,8 +1,9 @@
-const navWrapper = document.querySelector(".nav-wrapper");
-const hamMenu = document.querySelector(".hamburger-menu");
+const navWrapper = document.querySelector(".hamburger-menu");
+const hamMenu = document.querySelectorAll(".line");
 const sideNav = document.querySelector(".side-nav");
-const Toggler = () => {
-  hamMenu.classList.toggle("active");
+const Toggler = (e) => {
+  e.preventDefault();
+  hamMenu.forEach((a) => a.classList.toggle("active"));
   sideNav.classList.toggle("hide");
 };
 

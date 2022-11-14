@@ -141,6 +141,10 @@ h1 {
     min-height: 500;
   }
 
+  .links {
+    cursor: pointer;
+  }
+
   .hamburger-menu .active:first-child {
     transform: rotateZ(28deg);
     transform-origin: left;
@@ -228,7 +232,18 @@ h1 {
     height: 100%;
   }
 
-  .menu-items {
+  /* .menu-items {
+    display: none;
+  } */
+
+  .side-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .hide {
     display: none;
   }
 
