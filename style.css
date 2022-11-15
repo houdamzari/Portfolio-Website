@@ -362,6 +362,7 @@ h1 {
 
 .tags {
   margin-bottom: 20px;
+  float: left;
 }
 
 .forth_project {
