@@ -94,6 +94,11 @@ projectSection.innerHTML = projects;
 
 const modalContainer = document.querySelector(".modal-container");
 const modalToggler = document.querySelector(".btn");
+const xToggler = document.querySelector(".toggler-x-icon");
+xToggler.addEventListener("click", (e) => {
+  e.preventDefault();
+  modalContainer.classList.toggle("hide-modal");
+});
 console.log(modalToggler);
 console.log(modalContainer);
 modalToggler.addEventListener("click", (e) => {
