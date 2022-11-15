@@ -1,3 +1,7 @@
+.hide-modal {
+  display: none;
+}
+
 .logo {
   font-style: normal;
   font-weight: 700;
