@@ -148,11 +148,13 @@ h1 {
   .hamburger-menu .active:first-child {
     transform: rotateZ(28deg);
     transform-origin: left;
+    background-color: white;
   }
 
   .hamburger-menu .active:nth-child(2) {
     transform: rotateZ(-28deg) translateY(-4px);
     transform-origin: right;
+    background-color: white;
   }
 
   .hamburger-menu .active:last-child {
@@ -232,15 +234,19 @@ h1 {
     height: 100%;
   }
 
-  /* .menu-items {
-    display: none;
-  } */
-
   .side-nav {
+    position: absolute;
+    inset: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 20px;
+    background: #6070ff;
+    mix-blend-mode: multiply;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    padding: 200px 20px;
+    color: white;
+    font-weight: bolder;
+    font-size: 30px;
   }
 
   .hide {
@@ -254,6 +260,9 @@ h1 {
     align-items: center;
     gap: 4px;
     cursor: pointer;
+    position: absolute;
+    right: 0;
+    z-index: 99999;
   }
 
   .line {
