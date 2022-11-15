@@ -237,10 +237,14 @@ h1 {
   } */
 
   .side-nav {
+    position: absolute;
+    inset: 0;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 20px;
+    background: #6070FF;
+    mix-blend-mode: multiply;
+    filter: blur(8px);
+    z-index: 2;
   }
 
   .hide {
