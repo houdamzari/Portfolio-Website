@@ -116,7 +116,7 @@ for (arr of array) {
             </section>
          <div class="flex_wrapper-2">
           <div class="tags">
-            <ul>
+            <ul class="technologies_section">
               <li><a href="" class="tag">html</a></li>
               <li><a href="" class="tag">css</a></li>
               <li><a href="" class="tag">javascript</a></li>

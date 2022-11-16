@@ -152,6 +152,22 @@ h1 {
     min-height: 500;
   }
 
+  .see-live,
+  .see-source {
+    border: 1px solid #6070ff;
+    background-color: white;
+    padding: 10px 10px;
+    border-radius: 8px;
+    color: #6070ff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .technologies_section {
+    width: 100%;
+  }
+
   .About_Title {
     margin-bottom: 50px;
   }
@@ -160,8 +176,10 @@ h1 {
     font-size: 18px;
   }
 
-  .tags {
+  .technologies_section {
     padding: 10px 0 0 0;
+    display: flex;
+    gap: 10px;
   }
 
   .modal-container {
@@ -182,12 +200,24 @@ h1 {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
+    min-width: 300px;
     width: 65%;
     border-radius: 12px;
     font-size: 12px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+  }
+
+  .mobile-line {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    background-color: #000;
+    width: 40%;
+    border-radius: 8px;
   }
 
   .Modal-Tonic {
@@ -279,7 +309,6 @@ h1 {
     background-color: #fff;
     background-repeat: no-repeat;
     background-size: contain;
-    position: relative;
     padding: 0;
     background-position: center center;
     background-attachment: fixed;
@@ -816,6 +845,18 @@ form {
     gap: 15px;
     /* align-items: center; */
   }
+
+  .see-live,
+  .see-source {
+    border: 1px solid #6070ff;
+    background-color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #6070ff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
 }
 
 .close {
@@ -830,18 +871,6 @@ form {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-}
-
-.see-live,
-.see-source {
-  border: 1px solid #6070ff;
-  background-color: white;
-  padding: 10px 20px;
-  border-radius: 8px;
-  color: #6070ff;
-  display: flex;
-  align-items: center;
-  gap: 8px;
 }
 
 .btn-wrapper {
