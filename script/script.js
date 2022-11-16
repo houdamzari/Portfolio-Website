@@ -160,7 +160,6 @@ modalToggler.forEach((item) => {
   item.addEventListener("click", (e) => {
     e.preventDefault();
     var id = e.target.id;
-    console.log(id);
     modalContent.forEach((item) => {
       if (!item.classList.contains(id)) {
         modalContainer.classList.remove("hide-modal");
