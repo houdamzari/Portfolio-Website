@@ -177,3 +177,20 @@ span.forEach((item, id) => {
     });
   });
 });
+
+// form-validation
+
+function checkEmail(input) {
+  const re = /^[a-z]+\@[^\s]+\.[^\s]+$/;
+  if (re.test(input.value.trim())) {
+    // showSuccess(input);
+    alert("success");
+  } else {
+    Error.innerHtml = "error";
+  }
+}
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  checkEmail(email);
+});
