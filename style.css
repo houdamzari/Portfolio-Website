@@ -164,10 +164,6 @@ h1 {
     gap: 8px;
   }
 
-  .technologies_section {
-    width: 100%;
-  }
-
   .About_Title {
     margin-bottom: 50px;
   }
@@ -177,16 +173,15 @@ h1 {
   }
 
   .technologies_section {
+    width: 100%;
     padding: 10px 0 0 0;
     display: flex;
     gap: 10px;
   }
 
   .modal-container {
-    width: fit-content;
     position: fixed;
     padding-top: 70px;
-    background-color: transparent; /* Fallback color */
     left: 0;
     top: 0;
     width: 100%;
@@ -386,7 +381,6 @@ h1 {
 
 .list_items {
   list-style-type: circle;
-  /* width: 88px; */
   height: 16px;
   font-style: normal;
   font-weight: 600;
@@ -638,21 +632,18 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* align-items: center; */
   }
 
   .modal-container {
-    width: fit-content;
     position: fixed;
     padding-top: 70px;
-    background-color: transparent; /* Fallback color */
     left: 0;
     top: 0;
     width: 100%;
     height: 100vh;
-    overflow: auto; /* Enable scroll if needed */
+    overflow: auto;
     backdrop-filter: blur(2px);
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+    background-color: rgba(0, 0, 0, 0.4);
   }
 
   .modal-content {
@@ -839,13 +830,6 @@ form {
     margin-bottom: 100px;
   }
 
-  .main-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    /* align-items: center; */
-  }
-
   .see-live,
   .see-source {
     border: 1px solid #6070ff;
@@ -860,7 +844,7 @@ form {
 }
 
 .close {
-  color: #aaaaaa;
+  color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
