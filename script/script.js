@@ -161,8 +161,8 @@ const email = document.querySelector('.form_input-email');
 
 modalToggler.forEach((item) => {
   item.addEventListener('click', (e) => {
-    e.preventDefault();
     const { id } = e.target;
+    e.preventDefault();
     modalContent.forEach((item) => {
       if (!item.classList.contains(id)) {
         modalContainer.classList.remove('hide-modal');
