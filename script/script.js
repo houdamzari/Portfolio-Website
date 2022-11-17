@@ -157,6 +157,7 @@ const modalToggler = document.querySelectorAll('.btn');
 modalContainer.innerHTML = modal;
 const modalContent = document.querySelectorAll('.modal-content');
 const span = document.querySelectorAll('.close');
+const email = document.querySelector('.form_input-email');
 
 modalToggler.forEach((item) => {
   item.addEventListener('click', (e) => {
@@ -171,7 +172,7 @@ modalToggler.forEach((item) => {
   });
 });
 
-span.forEach((item, id) => {
+span.forEach((item) => {
   item.addEventListener('click', () => {
     modalContainer.classList.add('hide-modal');
     modalContent.forEach((item) => {
