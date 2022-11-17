@@ -199,3 +199,28 @@ form.addEventListener('submit', (e) => {
   Email = Email.replace(/[0-9]/g, '');
   checkEmail(Email);
 });
+
+
+// const onChange = (e) => {
+//   e.preventDefault();
+//   localStorage.setItem("fname", fullName.value);
+//   localStorage.setItem("comment", textarea.value);
+//   localStorage.setItem("email", email.value);
+// };
+
+//   let fName = localStorage.getItem("fname");
+//   let Comment = localStorage.getItem("comment");
+//   let Email = localStorage.getItem("email");
+//   console.log(Comment);
+
+//   if (Name || Comment || Email) {
+//     fullName.value = fName;
+//     textarea.value = Comment;
+//     email.value = Email;
+//   } else {
+//     console.log("no values yet!");
+//   }
+
+// Name.addEventListener("change", onChange);
+// textArea.addEventListener("change", onChange);
+// userEmail.addEventListener("change", onChange);
