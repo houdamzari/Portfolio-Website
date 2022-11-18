@@ -1,22 +1,24 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable no-restricted-syntax */
 /* eslint-disable no-undef */
-const navWrapper = document.querySelector(".hamburger-menu");
-const hamMenu = document.querySelectorAll(".line");
-const sideNav = document.querySelector(".side-nav");
-const sideLinks = document.querySelectorAll(".links");
-const projectSection = document.querySelector(".project_section");
+const navWrapper = document.querySelector('.hamburger-menu');
+const hamMenu = document.querySelectorAll('.line');
+const sideNav = document.querySelector('.side-nav');
+const sideLinks = document.querySelectorAll('.links');
+const projectSection = document.querySelector('.project_section');
+const form = document.querySelector('.myform');
+const Warning = document.querySelector('.warning');
 const Toggler = (e) => {
   e.preventDefault();
-  hamMenu.forEach((a) => a.classList.toggle("active"));
-  sideNav.classList.toggle("hide");
+  hamMenu.forEach((a) => a.classList.toggle('active'));
+  sideNav.classList.toggle('hide');
 };
 
-navWrapper.addEventListener("click", Toggler);
+navWrapper.addEventListener('click', Toggler);
 
 // eslint-disable-next-line no-plusplus
 for (let i = 0; i < sideLinks.length; i++) {
-  sideLinks[i].addEventListener("click", (e) => {
+  sideLinks[i].addEventListener('click', (e) => {
     const id = sideLinks[i].href.slice(23, sideLinks[i].href.length);
     Toggler(e);
     document.getElementById(id).scrollIntoView();
@@ -26,52 +28,52 @@ for (let i = 0; i < sideLinks.length; i++) {
 const array = [
   {
     id: 0,
-    name: "Tonic",
+    name: 'Tonic',
     description:
-      "A daily selection of privately personalized reads; no accounts or sign-ups required",
-    featuredimage: "./public/Tonic_Project.png",
-    technologies: ["html", "css", "javascript"],
-    linkToLiveVersion: "https://houdamzari.github.io/Portfolio-Website/",
-    linkToSource: "https://github.com/houdamzari/Portfolio-Website",
+      'A daily selection of privately personalized reads; no accounts or sign-ups required',
+    featuredimage: './public/Tonic_Project.png',
+    technologies: ['html', 'css', 'javascript'],
+    linkToLiveVersion: 'https://houdamzari.github.io/Portfolio-Website/',
+    linkToSource: 'https://github.com/houdamzari/Portfolio-Website',
   },
   {
     id: 1,
-    name: "Multi-Post Stories",
+    name: 'Multi-Post Stories',
     description:
-      "A daily selection of privately personalized reads; no accounts or sign-ups required",
-    featuredimage: "./public/Snapshoot_Portfolio.png",
-    technologies: ["html", "css", "javascript"],
-    linkToLiveVersion: "https://houdamzari.github.io/Portfolio-Website/",
-    linkToSource: "https://github.com/houdamzari/Portfolio-Website",
+      'A daily selection of privately personalized reads; no accounts or sign-ups required',
+    featuredimage: './public/Snapshoot_Portfolio.png',
+    technologies: ['html', 'css', 'javascript'],
+    linkToLiveVersion: 'https://houdamzari.github.io/Portfolio-Website/',
+    linkToSource: 'https://github.com/houdamzari/Portfolio-Website',
   },
   {
     id: 2,
-    name: "Tonic",
+    name: 'Tonic',
     description:
-      "A daily selection of privately personalized reads; no accounts or sign-ups required",
-    featuredimage: "./public/Tonic_2.png",
-    technologies: ["html", "css", "javascript"],
-    linkToLiveVersion: "https://houdamzari.github.io/Portfolio-Website/",
-    linkToSource: "https://github.com/houdamzari/Portfolio-Website",
+      'A daily selection of privately personalized reads; no accounts or sign-ups required',
+    featuredimage: './public/Tonic_2.png',
+    technologies: ['html', 'css', 'javascript'],
+    linkToLiveVersion: 'https://houdamzari.github.io/Portfolio-Website/',
+    linkToSource: 'https://github.com/houdamzari/Portfolio-Website',
   },
   {
     id: 3,
-    name: "Multi-Post Stories",
+    name: 'Multi-Post Stories',
     description:
-      "A daily selection of privately personalized reads; no accounts or sign-ups required",
-    featuredimage: "./public/Multi_Post.png",
-    technologies: ["html", "css", "javascript"],
-    linkToLiveVersion: "https://houdamzari.github.io/Portfolio-Website/",
-    linkToSource: "https://github.com/houdamzari/Portfolio-Website",
+      'A daily selection of privately personalized reads; no accounts or sign-ups required',
+    featuredimage: './public/Multi_Post.png',
+    technologies: ['html', 'css', 'javascript'],
+    linkToLiveVersion: 'https://houdamzari.github.io/Portfolio-Website/',
+    linkToSource: 'https://github.com/houdamzari/Portfolio-Website',
   },
 ];
-let projects = "";
-let modal = "";
+let projects = '';
+let modal = '';
 
 for (arr of array) {
   const looop = arr.technologies
     .map((a) => `<li><a class="tag">${a}</a></li>`)
-    .join("");
+    .join('');
   projects += `<div class="first_project">
         <img class="Tonic" src=${arr.featuredimage} alt="Tonic" /> 
         <div>
@@ -150,30 +152,51 @@ for (arr of array) {
 }
 projectSection.innerHTML = projects;
 
-const modalContainer = document.querySelector(".modal-container");
-const modalToggler = document.querySelectorAll(".btn");
+const modalContainer = document.querySelector('.modal-container');
+const modalToggler = document.querySelectorAll('.btn');
 modalContainer.innerHTML = modal;
-const modalContent = document.querySelectorAll(".modal-content");
-const span = document.querySelectorAll(".close");
+const modalContent = document.querySelectorAll('.modal-content');
+const span = document.querySelectorAll('.close');
+const email = document.querySelector('.form_input-email');
 
 modalToggler.forEach((item) => {
-  item.addEventListener("click", (e) => {
+  item.addEventListener('click', (e) => {
     const { id } = e.target;
     e.preventDefault();
     modalContent.forEach((item) => {
       if (!item.classList.contains(id)) {
-        modalContainer.classList.remove("hide-modal");
-        item.classList.add("hide-modal");
+        modalContainer.classList.remove('hide-modal');
+        item.classList.add('hide-modal');
       }
     });
   });
 });
 
 span.forEach((item) => {
-  item.addEventListener("click", () => {
-    modalContainer.classList.add("hide-modal");
+  item.addEventListener('click', () => {
+    modalContainer.classList.add('hide-modal');
     modalContent.forEach((item) => {
-      item.classList.remove("hide-modal");
+      item.classList.remove('hide-modal');
     });
   });
+});
+
+// form-validation
+
+function checkEmail(input) {
+  const re = /^[a-z]+$/g;
+
+  if (re.test(input)) {
+    Warning.innerHTML = '';
+    form.submit();
+  } else {
+    Warning.innerHTML = ' email address should be written in small letters only!';
+  }
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let Email = email.value.replace(/[^a-zA-Z0-9 ]/g, '');
+  Email = Email.replace(/[0-9]/g, '');
+  checkEmail(Email);
 });
