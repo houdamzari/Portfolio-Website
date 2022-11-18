@@ -8,6 +8,8 @@ const sideLinks = document.querySelectorAll('.links');
 const projectSection = document.querySelector('.project_section');
 const form = document.querySelector('.myform');
 const Warning = document.querySelector('.warning');
+const userEmail = document.querySelector('.user-email');
+
 const Toggler = (e) => {
   e.preventDefault();
   hamMenu.forEach((a) => a.classList.toggle('active'));
@@ -171,7 +173,7 @@ modalToggler.forEach((item) => {
   });
 });
 
-span.forEach((item, id) => {
+span.forEach((item) => {
   item.addEventListener('click', () => {
     modalContainer.classList.add('hide-modal');
     modalContent.forEach((item) => {
@@ -189,38 +191,40 @@ function checkEmail(input) {
     Warning.innerHTML = '';
     form.submit();
   } else {
-    Warning.innerHTML = ' email address should be written in small letters only!';
+    Warning.innerHTML =
+      ' email address should be written in small letters only!';
   }
 }
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  let Email = email.value.replace(/[^a-zA-Z0-9 ]/g, '');
+  let Email = userEmail.value.replace(/[^a-zA-Z0-9 ]/g, '');
   Email = Email.replace(/[0-9]/g, '');
   checkEmail(Email);
 });
+const { email } = form.elements;
+const Name = document.querySelector('.Name');
+const fullName = form.elements.fullname;
+const textArea = document.querySelector('.textArea');
+const textarea = form.elements.comment;
 
+const onChange = (e) => {
+  e.preventDefault();
+  localStorage.setItem('fname', fullName.value);
+  localStorage.setItem('comment', textarea.value);
+  localStorage.setItem('email', email.value);
+};
 
-// const onChange = (e) => {
-//   e.preventDefault();
-//   localStorage.setItem("fname", fullName.value);
-//   localStorage.setItem("comment", textarea.value);
-//   localStorage.setItem("email", email.value);
-// };
+const fName = localStorage.getItem('fname');
+const Comment = localStorage.getItem('comment');
+const Email = localStorage.getItem('email');
 
-//   let fName = localStorage.getItem("fname");
-//   let Comment = localStorage.getItem("comment");
-//   let Email = localStorage.getItem("email");
-//   console.log(Comment);
+if (Name || Comment || Email) {
+  fullName.value = fName;
+  textarea.value = Comment;
+  email.value = Email;
+}
 
-//   if (Name || Comment || Email) {
-//     fullName.value = fName;
-//     textarea.value = Comment;
-//     email.value = Email;
-//   } else {
-//     console.log("no values yet!");
-//   }
-
-// Name.addEventListener("change", onChange);
-// textArea.addEventListener("change", onChange);
-// userEmail.addEventListener("change", onChange);
+Name.addEventListener('change', onChange);
+textArea.addEventListener('change', onChange);
+userEmail.addEventListener('change', onChange);
