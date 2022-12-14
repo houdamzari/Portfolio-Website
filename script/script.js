@@ -1,6 +1,4 @@
-/* eslint-disable linebreak-style */
 /* eslint-disable no-restricted-syntax */
-/* eslint-disable no-undef */
 const navWrapper = document.querySelector('.hamburger-menu');
 const hamMenu = document.querySelectorAll('.line');
 const sideNav = document.querySelector('.side-nav');
@@ -30,12 +28,12 @@ for (let i = 0; i < sideLinks.length; i++) {
 const array = [
   {
     id: 0,
-    name: 'Tonic',
+    name: 'To do List',
     description:
-      'A daily selection of privately personalized reads; no accounts or sign-ups required',
-    featuredimage: './public/Tonic_Project.png',
+      '[Todo List] is a to do list web application built with html , css and js.',
+    featuredimage: './public/todolist.png',
     technologies: ['html', 'css', 'javascript'],
-    linkToLiveVersion: 'https://houdamzari.github.io/Portfolio-Website/',
+    linkToLiveVersion: 'https://houdamzari.github.io/Todo-List/dist/',
     linkToSource: 'https://github.com/houdamzari/Portfolio-Website',
   },
   {
@@ -71,7 +69,7 @@ const array = [
 ];
 let projects = '';
 let modal = '';
-
+let arr;
 for (arr of array) {
   const looop = arr.technologies
     .map((a) => `<li><a class="tag">${a}</a></li>`)
@@ -129,12 +127,13 @@ for (arr of array) {
           <hr/>
           <section class="btn-wrapper">
             <button class="see-live">
+            <a href='${arr.linkToLiveVersion}'>
               See live
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd"
                   d="M5 12C5 8.13401 8.13401 5 12 5C12.5523 5 13 4.55228 13 4C13 3.44772 12.5523 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21C16.9706 21 21 16.9706 21 12C21 11.4477 20.5523 11 20 11C19.4477 11 19 11.4477 19 12C19 15.866 15.866 19 12 19C8.13401 19 5 15.866 5 12ZM16 3C15.4477 3 15 3.44772 15 4C15 4.55228 15.4477 5 16 5H17.5858L11.2929 11.2929C10.9024 11.6834 10.9024 12.3166 11.2929 12.7071C11.6834 13.0976 12.3166 13.0976 12.7071 12.7071L19 6.41421V8C19 8.55228 19.4477 9 20 9C20.5523 9 21 8.55228 21 8V4C21 3.44772 20.5523 3 20 3H16Z"
                   fill="#6070FF" />
-              </svg>
+              </svg></a>
 
             </button>
 
@@ -191,8 +190,7 @@ function checkEmail(input) {
     Warning.innerHTML = '';
     form.submit();
   } else {
-    Warning.innerHTML =
-      ' email address should be written in small letters only!';
+    Warning.innerHTML = ' email address should be written in small letters only!';
   }
 }
 

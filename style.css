@@ -50,7 +50,7 @@ a {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
@@ -164,10 +164,6 @@ h1 {
     gap: 8px;
   }
 
-  .technologies_section {
-    width: 100%;
-  }
-
   .About_Title {
     margin-bottom: 50px;
   }
@@ -179,6 +175,7 @@ h1 {
   .technologies_section {
     padding: 10px 0 0 0;
     display: flex;
+    width: 100%;
     gap: 10px;
   }
 
@@ -186,10 +183,8 @@ h1 {
     width: fit-content;
     position: fixed;
     padding-top: 70px;
-    background-color: transparent; /* Fallback color */
     left: 0;
     top: 0;
-    width: 100%;
     height: 100vh;
     overflow: auto; /* Enable scroll if needed */
     backdrop-filter: blur(2px);
@@ -386,7 +381,6 @@ h1 {
 
 .list_items {
   list-style-type: circle;
-  /* width: 88px; */
   height: 16px;
   font-style: normal;
   font-weight: 600;
@@ -638,17 +632,14 @@ form {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    /* align-items: center; */
   }
 
   .modal-container {
     width: fit-content;
     position: fixed;
     padding-top: 70px;
-    background-color: transparent; /* Fallback color */
     left: 0;
     top: 0;
-    width: 100%;
     height: 100vh;
     overflow: auto; /* Enable scroll if needed */
     backdrop-filter: blur(2px);
@@ -764,14 +755,6 @@ form {
     padding: 30px 0;
   }
 
-  /* body {
-    margin: 0;
-    padding: 20px 100px;
-    box-sizing: border-box;
-    overflow-y: none;
-    background-color: #f7f7f9;
-  } */
-
   .languages {
     display: flex;
     flex-direction: row;
@@ -839,13 +822,6 @@ form {
     margin-bottom: 100px;
   }
 
-  .main-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    /* align-items: center; */
-  }
-
   .see-live,
   .see-source {
     border: 1px solid #6070ff;
@@ -856,11 +832,12 @@ form {
     display: flex;
     align-items: center;
     gap: 8px;
+    cursor: pointer;
   }
 }
 
 .close {
-  color: #aaaaaa;
+  color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
